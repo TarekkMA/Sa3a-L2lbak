@@ -1,5 +1,9 @@
 package com.example;
 
+import java.util.Collections;
+
+import static com.example.JokeList.JOKES;
+
 public class JokeSimth {
   private final String deviceUUID;
 
@@ -8,9 +12,9 @@ public class JokeSimth {
   }
 
   public Joke getJoke(){
-    Joke j = new Joke();
-    j.setJoke("فيه وحدة تصلي دخلوا عليها اثنتين قالت الأولى للثانية شوفي البنت بتصلي بخشوع ازاي قامت ردت عليهم وكمان انا صايمة ..");
-    return j;
+    Collections.shuffle(JOKES);
+    String jokeText = JOKES.get(0);
+    return new Joke(jokeText);
   }
 
 }

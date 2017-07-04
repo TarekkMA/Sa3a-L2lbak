@@ -6,7 +6,6 @@ buildscript {
   }
   dependencies {
     classpath 'com.android.tools.build:gradle:2.3.3'
-    classpath 'com.google.gms:google-services:3.1.0'
     classpath 'com.jakewharton:butterknife-gradle-plugin:8.6.0'
 
     // NOTE: Do not place your application dependencies here; they belong
@@ -24,3 +23,26 @@ task clean(type: Delete) {
   delete rootProject.buildDir
 }
 
+task startServer (dependsOn: ":backend:appengineRun") {
+  project(":backend").afterEvaluate { backend ->
+    backend.extensions.appengine.daemon = true
+  }
+  doLast {
+    println "started the server!"
+  }
+}
+
+task runAndroidTests{
+  dependsOn ":jokeinterfacelibrary:connectedAndroidTest"
+  mustRunAfter ":startServer"
+}
+
+task stopServer{
+  dependsOn ":backend:appengineStop"
+  mustRunAfter "runAndroidTests"
+}
+
+task testBackend{
+  group 'MyGroup'
+  dependsOn = [":startServer", ":runAndroidTests", ":stopServer"]
+}

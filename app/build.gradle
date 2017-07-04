@@ -52,10 +52,10 @@ dependencies {
   compile 'com.jakewharton:butterknife:8.6.0'
   annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 
-  freeCompile 'com.google.firebase:firebase-ads:11.0.2'
+  freeCompile 'com.google.android.gms:play-services-ads:9.8.0'
+
 
 
   testCompile 'junit:junit:4.12'
 }
 
-apply plugin: 'com.google.gms.google-services'

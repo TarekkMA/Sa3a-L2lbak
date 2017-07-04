@@ -13,6 +13,19 @@ public class Joke {
   private int likes;
   private int dislikes;
 
+  public Joke(String joke, String id, int shownTimes, boolean isFavored, int likes, int dislikes) {
+    this.joke = joke;
+    this.id = id;
+    this.shownTimes = shownTimes;
+    this.isFavored = isFavored;
+    this.likes = likes;
+    this.dislikes = dislikes;
+  }
+
+  public Joke(String joke) {
+    this.joke = joke;
+  }
+
   public String getJoke() {
     return joke;
   }
