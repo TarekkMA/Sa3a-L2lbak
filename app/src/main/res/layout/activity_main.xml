@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-     android:layout_height="match_parent"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:name="com.tmaproject.sa3al2lbak.MainFragment"/>
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    >
+
+  <fragment
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_height="0dp"
+      android:layout_width="match_parent"
+      android:layout_weight="1"
+      android:id="@+id/frag"
+      android:name="com.tmaproject.jokeinterfacelibrary.NewJokeFragment"
+      tools:layout="@layout/fragment_new_joke"
+      />
+
+
+<include layout="@layout/ad_layout_banner1"/>
+
+  </LinearLayout>

@@ -9,7 +9,6 @@ import com.google.android.gms.ads.MobileAds;
  */
 
 public class App extends Application {
-
   @Override public void onCreate() {
     super.onCreate();
     MobileAds.initialize(this, "ca-app-pub-3510598204121240~8229965511");

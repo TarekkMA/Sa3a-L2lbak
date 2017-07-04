@@ -1,4 +1,4 @@
-package com.tmaproject.sa3al2lbak;
+package com.tmaproject.jokeinterfacelibrary;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -3,16 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tmaproject.sa3al2lbak.NewJokeFragment"
     android:orientation="vertical"
     >
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="1"
-      android:orientation="vertical"
-      >
+
     <TextView
         android:id="@+id/joke.text"
         android:layout_width="match_parent"
@@ -51,8 +45,6 @@
           />
     </LinearLayout>
 
-  </LinearLayout>
 
-  <include layout="@layout/ad_layout_banner1" />
 
 </LinearLayout>
